@@ -1,0 +1,317 @@
+<div class="employee-layout">
+
+  <aside class="sidebar" [class.show]="sidebarOpen">
+    <div class="brand">
+      <div class="brand-icon">
+        <i class="bi bi-people-fill"></i>
+      </div>
+      <div>
+        <h3>HRMS</h3>
+        <small>Human Resource Management System</small>
+      </div>
+    </div>
+
+    <div class="menu-title">EMPLOYEE PORTAL</div>
+
+    <nav>
+      <a routerLink="/employee/dashboard" routerLinkActive="active">
+        <i class="bi bi-grid-1x2-fill"></i>
+        Dashboard
+      </a>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-person"></i>
+        My Profile
+      </a>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-calendar-check"></i>
+        Attendance
+      </a>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-calendar2-week"></i>
+        Leave Management
+      </a>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-wallet2"></i>
+        Payroll
+      </a>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-file-earmark-text"></i>
+        Payslips
+      </a>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-bullseye"></i>
+        Performance
+      </a>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-folder"></i>
+        Documents
+      </a>
+
+      <div class="menu-title">OTHER</div>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-bell"></i>
+        Notifications
+        <span class="notification-count">3</span>
+      </a>
+
+      <a href="javascript:void(0)">
+        <i class="bi bi-gear"></i>
+        Settings
+      </a>
+
+      <a href="javascript:void(0)" (click)="logout()">
+        <i class="bi bi-box-arrow-right"></i>
+        Logout
+      </a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+
+    <header class="top-header">
+      <div class="header-left">
+        <button class="menu-button" (click)="toggleSidebar()" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <div>
+          <h2>Employee Dashboard</h2>
+          <p>Welcome back! Here's what's happening today.</p>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <i class="bi bi-bell notification-icon"></i>
+
+        <div class="employee-info">
+          <div class="avatar">RK</div>
+          <div class="employee-details">
+            <strong>Ravi Kumar</strong>
+            <small>Software Engineer</small>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="dashboard-content">
+
+      <div class="welcome-card">
+        <h1>Good Morning, Ravi! 👋</h1>
+        <p>Have a productive day. Here's your employee portal overview.</p>
+      </div>
+
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <i class="bi bi-calendar-check"></i>
+          </div>
+          <span>Present Days</span>
+          <h2>21</h2>
+          <small class="success">↑ 2 days this month</small>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <i class="bi bi-calendar2-check"></i>
+          </div>
+          <span>Leave Balance</span>
+          <h2>12</h2>
+          <small>Days available</small>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon orange">
+            <i class="bi bi-clock"></i>
+          </div>
+          <span>Working Hours</span>
+          <h2>7h 42m</h2>
+          <small>Today's working time</small>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon purple">
+            <i class="bi bi-wallet2"></i>
+          </div>
+          <span>Last Payslip</span>
+          <h2>₹85,400</h2>
+          <small>August 2026</small>
+        </div>
+
+      </div>
+
+      <div class="dashboard-grid">
+
+        <div class="dashboard-card attendance-card">
+          <div class="card-title">
+            <h3>Today's Attendance</h3>
+            <i class="bi bi-three-dots"></i>
+          </div>
+
+          <div class="attendance-box">
+            <h1>09:14 AM</h1>
+            <p>Thursday, October 1, 2026</p>
+            <button class="check-btn">
+              <i class="bi bi-box-arrow-in-right"></i>
+              Check In
+            </button>
+          </div>
+
+          <div class="attendance-details">
+            <div>
+              <span>Check In</span>
+              <strong>09:14 AM</strong>
+            </div>
+            <div>
+              <span>Check Out</span>
+              <strong>--</strong>
+            </div>
+            <div>
+              <span>Total</span>
+              <strong>7h 42m</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-title">
+            <h3>Leave Balance</h3>
+            <a href="javascript:void(0)">View All</a>
+          </div>
+
+          <div class="leave-list">
+            <div>
+              <span>Casual Leave</span>
+              <strong>06 Days</strong>
+            </div>
+            <div>
+              <span>Sick Leave</span>
+              <strong>04 Days</strong>
+            </div>
+            <div>
+              <span>Earned Leave</span>
+              <strong>02 Days</strong>
+            </div>
+          </div>
+
+          <button class="apply-btn">+ Apply Leave</button>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-title">
+            <h3>Quick Actions</h3>
+          </div>
+
+          <div class="quick-grid">
+            <a href="javascript:void(0)">
+              <i class="bi bi-calendar-plus"></i>
+              <span>Apply Leave</span>
+            </a>
+            <a href="javascript:void(0)">
+              <i class="bi bi-file-earmark-pdf"></i>
+              <span>Payslip</span>
+            </a>
+            <a href="javascript:void(0)">
+              <i class="bi bi-person"></i>
+              <span>Profile</span>
+            </a>
+            <a href="javascript:void(0)">
+              <i class="bi bi-download"></i>
+              <span>Documents</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bottom-grid">
+
+        <div class="dashboard-card">
+          <div class="card-title">
+            <h3>Recent Leave Requests</h3>
+            <a href="javascript:void(0)">View All</a>
+          </div>
+
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Leave Type</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th>Days</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Casual Leave</td>
+                  <td>15 Sep 2026</td>
+                  <td>16 Sep 2026</td>
+                  <td>2</td>
+                  <td><span class="approved">Approved</span></td>
+                </tr>
+                <tr>
+                  <td>Sick Leave</td>
+                  <td>25 Sep 2026</td>
+                  <td>25 Sep 2026</td>
+                  <td>1</td>
+                  <td><span class="pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Earned Leave</td>
+                  <td>02 Aug 2026</td>
+                  <td>04 Aug 2026</td>
+                  <td>3</td>
+                  <td><span class="approved">Approved</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-title">
+            <h3>Upcoming Holidays</h3>
+            <a href="javascript:void(0)">View All</a>
+          </div>
+
+          <div class="holiday">
+            <div>
+              <strong>Gandhi Jayanti</strong>
+              <small>National Holiday</small>
+            </div>
+            <span>Oct 02</span>
+          </div>
+
+          <div class="holiday">
+            <div>
+              <strong>Dussehra</strong>
+              <small>Festival Holiday</small>
+            </div>
+            <span>Oct 20</span>
+          </div>
+
+          <div class="holiday">
+            <div>
+              <strong>Diwali</strong>
+              <small>Festival Holiday</small>
+            </div>
+            <span>Nov 08</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+</div>
